@@ -9,7 +9,7 @@ body{
     font-family: Arial, sans-serif;
 }
 
-/* Header */
+/* Header Seaction */
 header{
     background-color: #1f2937;
     padding: 1rem 5%;
@@ -150,6 +150,92 @@ header{
     }
 }
 
+/* Search Bar */
+.search-box{
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+.search-box input{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.search-box button{
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .search-box{
+        width: 90%;
+    }
+}
+
+
+/* Cart */
+
+.header-right{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-icon{
+    position: relative;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.cart-count{
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tablet */
+@media (max-width: 768px){
+    .cart-icon{
+        font-size: 24px;
+    }
+
+    .cart-count{
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px){
+    .cart-icon{
+        font-size: 20px;
+    }
+
+    .cart-count{
+        width: 14px;
+        height: 14px;
+        font-size: 9px;
+        top: -6px;
+        right: -8px;
+    }
+}
+
+
 /* Hero Seaction */
 
 .hero{
@@ -237,21 +323,14 @@ header{
 
 /* buy-btn */
 
-.buy-btn {
-    background-color: #2874f0;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
+.cart-btn{
     width: 100%;
-    max-width: 250px;
-    transform: 0.3s;
-}
-
-.category-box{
-    transition: all 0.4s ease;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #ff6b00;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -504,4 +583,9 @@ header{
         flex-direction:column;
         text-align:center;
     }
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 }
